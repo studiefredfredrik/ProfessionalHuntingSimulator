@@ -13,9 +13,10 @@ namespace HighScoreApi.Controllers
         readonly IDocumentStore _store;
         readonly HighScoreSettings _highScoreSettings;
 
-        public HighScoreController(IDocumentStore store)
+        public HighScoreController(IDocumentStore store, HighScoreSettings highScoreSettings)
         {
             _store = store;
+            _highScoreSettings = highScoreSettings;
         }
 
         [HttpGet]
