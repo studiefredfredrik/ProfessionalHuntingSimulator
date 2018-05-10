@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\XmlTools.cs">
     <Files>
-      <File FileName="Assets\Scripts\MainMenuScript.cs" Line="51" Column="29" />
-      <File FileName="Assets\Scripts\InitializeGameTrash.cs" Line="44" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\InitializeGameTrash.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\XmlTools.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\TimeKeeper.cs" Line="1" Column="1" />
       <File FileName="Assets\Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="1" Column="1" />

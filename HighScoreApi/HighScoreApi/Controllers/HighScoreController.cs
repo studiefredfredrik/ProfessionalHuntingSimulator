@@ -32,14 +32,14 @@ namespace HighScoreApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody]HighScoreDocument value, string password)
+        public IActionResult Post([FromBody]HighScoreDocument score, string password)
         {
             if (password != _highScoreSettings.SuperSecretApplicationKey) return Forbid();
 
-            value.TimeOfEntry = DateTime.Now;
+            score.TimeOfEntry = DateTime.Now;
             using (var session = _store.OpenSession())
             {
-                session.Store(value);
+                session.Store(score);
                 session.SaveChanges();
             }
             return Ok();
