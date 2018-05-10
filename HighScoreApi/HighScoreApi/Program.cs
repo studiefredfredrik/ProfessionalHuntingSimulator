@@ -14,7 +14,7 @@ namespace HighScoreApi
         {
             return WebHost.CreateDefaultBuilder(args)
                     .UseStartup<Startup>()
-                    .UseUrls("*:9090")
+                    .UseUrls("http://*:9090")
                     .Build();
         }
     }
