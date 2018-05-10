@@ -4,7 +4,7 @@ namespace HighScoreApi
 {
     public static class RavenDbConfiguration
     {
-        public static IDocumentStore ConfigureRavenDb(RavenDbSettings settings)
+        public static IDocumentStore Configure(RavenDbSettings settings)
         {
             var documentStore = new DocumentStore
             {

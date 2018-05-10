@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using HighScoreApi.Configuration;
 using Microsoft.AspNetCore.Mvc;
 using Raven.Client.Documents;
 
 namespace HighScoreApi.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class HighScoreController : Controller
     {
-        private const string SuperSecretAdminKey = "TheStrongestPasswordEver";
-        private const string SuperSecretApplicationKey = "PeopleCantPostWithoutPlaying";
         readonly IDocumentStore _store;
+        readonly HighScoreSettings _highScoreSettings;
 
-        public ValuesController(IDocumentStore store)
+        public HighScoreController(IDocumentStore store)
         {
             _store = store;
         }
@@ -33,7 +33,7 @@ namespace HighScoreApi.Controllers
         [HttpPost]
         public IActionResult Post([FromBody]HighScoreDocument value, string password)
         {
-            if (password != SuperSecretApplicationKey) return Forbid();
+            if (password != _highScoreSettings.SuperSecretApplicationKey) return Forbid();
 
             value.TimeOfEntry = DateTime.Now;
             using (var session = _store.OpenSession())
@@ -47,7 +47,7 @@ namespace HighScoreApi.Controllers
         [HttpDelete]
         public IActionResult Delete(string id, string password)
         {
-            if (password != SuperSecretApplicationKey) return Forbid();
+            if (password != _highScoreSettings.SuperSecretApplicationKey) return Forbid();
             
             using (var session = _store.OpenSession())
             {
