@@ -15,7 +15,6 @@ HighScoreApi/HighScoreApi/obj/
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
-/[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
 
@@ -32,6 +31,9 @@ ExportedObj/
 *.pidb
 *.svd
 *.pdb
+
+*.mdb
+Library/assetDatabase3
 
 # Unity3D generated meta files
 *.pidb.meta
