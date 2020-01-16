@@ -6,6 +6,14 @@ immersive landscape.
 The game also allows you to express your emotions by giving 
 animals the finger. 
 
+Edit 2020:
+Note that this project was build using Unity 2017.1.1  
+You can find this version in the Unity archive here: https://unity3d.com/get-unity/download/archive  
+
+## WebGl demo  
+The game can be run in the browser:  
+https://static.electricfur.energy/professional-hunting-simulator/  
+
 ## Windows store
 The game is avaliable for free on Windows Store
 The link is https://www.microsoft.com/store/apps/9nblggh4w64x
